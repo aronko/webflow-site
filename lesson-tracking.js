@@ -98,4 +98,21 @@ document.addEventListener('DOMContentLoaded', function() {
     var lastOpenedLessonSlug = getLastOpenedLessonSlug();
     console.log("last Opened lesson slug" + lastOpenedLessonSlug);
 
-});
+    //implementing a smooth scroll to the current item
+    const currentItem = document.querySelector('.table-of-content-item.w--current');
+
+    if (currentItem) {
+        const collectionList = document.querySelector('.sidebar-item'); 
+        const offsetTop = currentItem.offsetTop;
+        
+        // Calculate the scroll position
+        const scrollPosition = offsetTop - collectionList.offsetTop-30;
+        
+        // Scroll to the calculated position smoothly
+        collectionList.scrollTo({
+          top: scrollPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  
