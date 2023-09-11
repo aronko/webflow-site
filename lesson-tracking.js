@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const offsetTop = currentItem.offsetTop;
         
         // Calculate the scroll position
-        const scrollPosition = offsetTop - collectionList.offsetTop-80;
+        const scrollPosition = offsetTop - collectionList.offsetTop - 30;
         
         // Scroll to the calculated position smoothly
         collectionList.scrollTo({
